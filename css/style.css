@@ -5,16 +5,67 @@
 }
 body {
   padding: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
 }
+
+/* Header */
+
 header {
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      rgba(255, 0, 0, 0.804),
-      rgba(255, 161, 127, 0.811)
+      rgba(255, 0, 0, 0.7),
+      rgba(255, 161, 127, 0.75)
     ),
     url("../img/pexels-mat-brown-150387-1395964.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  padding: 0.4rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+h1 {
+  color: white;
+}
+.main-heading {
+  font-size: 3.2rem;
+  letter-spacing: 1.8rem;
+  animation-name: moveFromLeft;
+  animation-duration: 10s;
+}
+.quote-heading {
+  font-size: 2rem;
+  letter-spacing: 0.6rem;
+}
+
+.text-area {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+
+  80% {
+    transform: translateX(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(3rem);
+  }
 }
