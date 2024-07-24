@@ -54,7 +54,33 @@ h1 {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
+
+/* Buttons */
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.8rem 1.4rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+.btn-light {
+  background-color: #fff;
+  color: #444;
+}
+
+/* Animations */
 
 @keyframes moveFromLeft {
   0% {
