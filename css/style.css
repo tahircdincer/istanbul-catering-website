@@ -24,7 +24,7 @@ header {
   position: relative;
 }
 
-.logo {
+.header__logo {
   text-decoration: none;
   color: white;
   padding: 0.4rem;
@@ -36,20 +36,20 @@ header {
 h1 {
   color: white;
 }
-.main-heading {
+.heading-container--main-heading {
   font-size: 3.2rem;
   display: block;
   letter-spacing: 1.8rem;
   animation: moveFromLeft 4s ease-out;
 }
-.quote-heading {
+.heading-container--quote-heading {
   font-size: 2rem;
   letter-spacing: 0.6rem;
   display: block;
   animation: moveFromRight 4s ease-out;
 }
 
-.text-area {
+.header__text-area {
   position: absolute;
   left: 50%;
   top: 40%;
@@ -76,12 +76,12 @@ h1 {
   transform: translateY(-1px);
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }
-.btn-light {
+.btn--light {
   background-color: #fff;
   color: #444;
 }
 
-.btn-animate {
+.btn--animate {
   animation: moveFromBottom 0.5s ease-out;
   animation-delay: 0.8s;
   animation-fill-mode: backwards;
@@ -95,7 +95,7 @@ h1 {
   transition: all 0.5s;
 }
 
-.btn-light::after {
+.btn--light::after {
   background-color: #fff;
   position: absolute;
   top: 0px;
