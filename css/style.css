@@ -65,6 +65,7 @@ h1 {
   padding: 0.4rem 0.8rem;
   display: inline-block;
   transition: all 0.3s;
+  position: relative;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -80,6 +81,32 @@ h1 {
   color: #444;
 }
 
+.btn-animate {
+  animation: moveFromBottom 0.5s ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: backwards;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.btn-light::after {
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  transform: scalex(1.5) scaleY(1.8);
+  opacity: 0;
+}
 /* Animations */
 
 @keyframes moveFromLeft {
@@ -109,5 +136,17 @@ h1 {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
